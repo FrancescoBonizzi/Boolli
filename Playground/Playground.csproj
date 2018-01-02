@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30298E8A-8323-48A6-BB0F-0E4EDC886212}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Boolli</RootNamespace>
-    <AssemblyName>Boolli</AssemblyName>
+    <ProjectGuid>{17956798-AC7C-48A6-9539-9830A00B0F11}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Playground</RootNamespace>
+    <AssemblyName>Playground</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,24 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndNode.cs" />
-    <Compile Include="AstInterpreter.cs" />
-    <Compile Include="AstNode.cs" />
-    <Compile Include="Extensions\BoolExtensions.cs" />
-    <Compile Include="NamedBooleanFunction.cs" />
-    <Compile Include="Evaluator.cs" />
-    <Compile Include="Exceptions\DuplicatedFuncOfBoolExceptions.cs" />
-    <Compile Include="Exceptions\InvalidLexemException.cs" />
-    <Compile Include="Extensions\BooleanFunctionsExtensions.cs" />
-    <Compile Include="FuncOfBoolExpressionsToBooleanExpressionConverter.cs" />
-    <Compile Include="Lexer.cs" />
-    <Compile Include="NotNode.cs" />
-    <Compile Include="BooleanNode.cs" />
-    <Compile Include="OrNode.cs" />
-    <Compile Include="AstParser.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Token.cs" />
-    <Compile Include="TokenTypes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Boolli\Boolli.csproj">
+      <Project>{30298e8a-8323-48a6-bb0f-0e4edc886212}</Project>
+      <Name>Boolli</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
