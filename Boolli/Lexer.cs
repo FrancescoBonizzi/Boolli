@@ -1,6 +1,7 @@
 ﻿using Boolli.Exceptions;
 using Boolli.Extensions;
 using System;
+using System.Globalization;
 
 namespace Boolli
 {
@@ -14,9 +15,9 @@ namespace Boolli
         
         public Lexer(string inputString)
         {
-            _input = inputString;
+            _input = inputString.ToLower(CultureInfo.InvariantCulture);
             _currentPosition = 0;
-            _currentChar = inputString[_currentPosition];
+            _currentChar = _input[_currentPosition];
         }
 
         private bool IsEOF
@@ -96,21 +97,21 @@ namespace Boolli
 
             string operand = _input.Substring(startingPosition, _currentPosition - startingPosition);
 
-            if (operand == "and" || operand == "&")
+            if (operand == "and" || operand == "&&")
             {
                 Advance();
                 return new Token()
                 {
-                    TokenType = TokenTypes.and,
+                    TokenType = TokenTypes.And,
                     TokenValue = operand
                 };
             }
-            else if (operand == "or" || operand == "|")
+            else if (operand == "or" || operand == "||")
             {
                 Advance();
                 return new Token()
                 {
-                    TokenType = TokenTypes.or,
+                    TokenType = TokenTypes.Or,
                     TokenValue = operand
                 };
             }
@@ -119,7 +120,7 @@ namespace Boolli
                 Advance();
                 return new Token()
                 {
-                    TokenType = TokenTypes.not,
+                    TokenType = TokenTypes.Not,
                     TokenValue = operand
                 };
             }

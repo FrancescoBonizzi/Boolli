@@ -11,7 +11,7 @@ namespace Boolli.UnitTests
         [DataRow("not true", false)]
         [DataRow("not false", true)]
 
-        // Nabilità del not
+        // N-abilità del not
         [DataRow("not not false", false)]
         [DataRow("not not true", true)]
 
@@ -44,6 +44,29 @@ namespace Boolli.UnitTests
         [DataRow("true and (true and false)", false)]
         [DataRow("(true and false) and (true and false)", false)]
         [DataRow("(true and false) or (true and false)", false)]
+
+        // Sostitutibilità dei token
+        [DataRow("True", true)]
+        [DataRow("TRUE", true)]
+        [DataRow("TrUe", true)]
+        [DataRow("1", true)]
+        [DataRow("1 and 0", false)]
+        [DataRow("1 and false", false)]
+        [DataRow("0 or false", false)]
+        [DataRow("false or 1", true)]
+        [DataRow("False", false)]
+        [DataRow("FALSE", false)]
+        [DataRow("FaLsE", false)]
+        [DataRow("0", false)]
+        [DataRow("True AND false", false)]
+        [DataRow("True && false", false)]
+        [DataRow("True AnD false", false)]
+        [DataRow("True Or false", true)]
+        [DataRow("True || false", true)]
+        [DataRow("True OR false", true)]
+        [DataRow("NoT True", false)]
+        [DataRow("! True", false)]
+
         [DataTestMethod]
         public void Bolli_Should_Evaluate_Correctly_Good_Expressions(
             string expression, bool result)

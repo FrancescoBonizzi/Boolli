@@ -29,9 +29,9 @@ namespace Boolli
             // factor: (not)* factor | boolean | LPAR expr RPAR
             var token = _currentToken;
 
-            if (token.TokenType == TokenTypes.not)
+            if (token.TokenType == TokenTypes.Not)
             {
-                Eat(TokenTypes.not);
+                Eat(TokenTypes.Not);
                 return new NotNode(token, Factor());
             }
             else if (token.TokenType == TokenTypes.Boolean)
@@ -59,20 +59,20 @@ namespace Boolli
 
             var node = Factor();
 
-            while (_currentToken.TokenType == TokenTypes.and
-               || _currentToken.TokenType == TokenTypes.or)
+            while (_currentToken.TokenType == TokenTypes.And
+               || _currentToken.TokenType == TokenTypes.Or)
             {
                 var token = _currentToken;
 
                 switch (token.TokenType)
                 {
-                    case TokenTypes.and:
-                        Eat(TokenTypes.and);
+                    case TokenTypes.And:
+                        Eat(TokenTypes.And);
                         node = new AndNode(token, node, Factor());
                         break;
 
-                    case TokenTypes.or:
-                        Eat(TokenTypes.or);
+                    case TokenTypes.Or:
+                        Eat(TokenTypes.Or);
                         node = new OrNode(token, node, Factor());
                         break;
                 }

@@ -4,9 +4,9 @@
     {
         Boolean,
         Eof,
-        and,
-        or,
-        not,
+        And,
+        Or,
+        Not,
         Lpar,
         Rpar
     }
