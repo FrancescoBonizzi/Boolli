@@ -1,5 +1,6 @@
 ﻿using Boolli.Extensions;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Boolli
 {
@@ -10,10 +11,26 @@ namespace Boolli
             IEnumerable<NamedBooleanFunction> functions)
         {
             // TODO Spacca se non ci sono tutte, o se ci sono booleanFunction con lo stesso nome
-            
+
             string booleanExpression = funcOfBoolExpression;
             foreach (var func in functions)
                 booleanExpression = booleanExpression.Replace(func.Name, func.Function().ToBoolliString());
+
+            return booleanExpression;
+        }
+
+        public async Task<string> Convert(
+            string funcOfBoolExpression,
+            IEnumerable<NamedAsyncBooleanFunction> asyncFunctions)
+        {
+            // TODO Spacca se non ci sono tutte, o se ci sono booleanFunction con lo stesso nome
+
+            string booleanExpression = funcOfBoolExpression;
+            foreach (var func in asyncFunctions)
+            {
+                var thisFuncResult = await func.AsyncFunction(); // TODO: da rivedere
+                booleanExpression = booleanExpression.Replace(func.Name, thisFuncResult.ToBoolliString());
+            }
 
             return booleanExpression;
         }
