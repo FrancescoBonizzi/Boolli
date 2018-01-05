@@ -32,7 +32,7 @@ How can it be helpful?
 `TODO`
 
 # Building
-Simply clone this repro and build the `Boolli.sln` solution.
+Simply clone this repository and build the `Boolli.sln` solution.
 
 # How to contribute
 - Report any issues
