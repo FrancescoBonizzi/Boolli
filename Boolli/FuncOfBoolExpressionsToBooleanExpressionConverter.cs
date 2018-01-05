@@ -10,7 +10,8 @@ namespace Boolli
             string funcOfBoolExpression,
             IEnumerable<NamedBooleanFunction> functions)
         {
-            // TODO Spacca se non ci sono tutte, o se ci sono booleanFunction con lo stesso nome
+            // TODO Spacca se non ci sono tutte le f nell'expression
+            // TODO Check che non vengano utilizzati come nomi di funzioni delle parole chiave del linguaggio
 
             string booleanExpression = funcOfBoolExpression;
             foreach (var func in functions)
@@ -24,6 +25,7 @@ namespace Boolli
             IEnumerable<NamedAsyncBooleanFunction> asyncFunctions)
         {
             // TODO Spacca se non ci sono tutte, o se ci sono booleanFunction con lo stesso nome
+            // TODO Check che non vengano utilizzati come nomi di funzioni delle parole chiave del linguaggio
 
             string booleanExpression = funcOfBoolExpression;
             foreach (var func in asyncFunctions)

@@ -15,6 +15,9 @@ namespace Boolli
         
         public Lexer(string inputString)
         {
+            if (string.IsNullOrWhiteSpace(inputString))
+                throw new EmptyExpressionException();
+
             _input = inputString.ToLower(CultureInfo.InvariantCulture);
             _currentPosition = 0;
             _currentChar = _input[_currentPosition];
