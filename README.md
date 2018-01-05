@@ -29,7 +29,44 @@ How can it be helpful?
 [NuGet.org package page](https://www.nuget.org/packages/Boolli)
 
 # Getting started
-`TODO`
+#### 1. Evaluate a simple boolean expression
+
+```csharp
+var boolli = new Evaluator();
+string booleanExpression = "not true and false or (true and false)";
+bool result = boolli.EvaluateBooleanExpression(booleanExpression);
+```
+
+You can also use `0` as `false` and `1` as `true`:
+```csharp
+var boolli = new Evaluator();
+string booleanExpression = "not 1 and 0 or (true and false)";
+bool result = boolli.EvaluateBooleanExpression(booleanExpression);
+```
+
+#### 2. Evaluate a simple `Func<bool>` expression
+```csharp
+var boolli = new Evaluator();
+bool result = boolli.EvaluateFuncOfBoolExpression(
+    "f1 and f2",
+    new NamedBooleanFunction[]
+    {
+        new NamedBooleanFunction("f1", () => true),
+        new NamedBooleanFunction("f2", () => false),
+    });
+```
+
+#### 3. Evaluate a simple `Func<Task<bool>>` expression
+```csharp
+var boolli = new Evaluator();
+bool result = await boolli.EvaluateFuncOfBoolExpressionAsync(
+    "f3 and f4",
+    new NamedAsyncBooleanFunction[]
+    {
+        new NamedAsyncBooleanFunction("f3", async () => { await Task.Delay(100); return true; }),
+        new NamedAsyncBooleanFunction("f4", async () => { await Task.Delay(100); return true; }),
+    });
+```
 
 # Building
 Simply clone this repository and build the `Boolli.sln` solution.
