@@ -50,6 +50,7 @@
     <Compile Include="AstNode.cs" />
     <Compile Include="Exceptions\EmptyExpressionException.cs" />
     <Compile Include="Exceptions\InvalidFactorException.cs" />
+    <Compile Include="Exceptions\InvalidFunctionNameException.cs" />
     <Compile Include="Exceptions\UnexpectedNodeException.cs" />
     <Compile Include="Exceptions\InvalidTokenToParseException.cs" />
     <Compile Include="Extensions\BoolExtensions.cs" />

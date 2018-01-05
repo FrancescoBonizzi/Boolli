@@ -10,6 +10,9 @@ namespace Boolli
         public NamedBooleanFunction(
             string name, Func<bool> function)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentNullException(nameof(name), "Function name cannot be null or empty");
+
             Name = name;
             Function = function ?? throw new ArgumentNullException(nameof(function), "I cannot evaluate a null function");
         }

@@ -1,21 +1,42 @@
-﻿using Boolli.Extensions;
+﻿using Boolli.Exceptions;
+using Boolli.Extensions;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Boolli
 {
     public class FuncOfBoolExpressionsToBooleanExpressionConverter
     {
+        private readonly string[] _languageKeywords = new string[]
+        {
+            "and", "or", "&&", "||", "&", "|", "!", "not", "true", "false", "0", "1", "^", "(", ")"
+        };
+
+        private void ValidateFunctionsNames(IEnumerable<string> functionsNames)
+        {
+            foreach(var functionName in functionsNames)
+            {
+                foreach(var languageKeyword in _languageKeywords)
+                {
+                    if (string.Compare(functionName, languageKeyword, true) == 0)
+                        throw new InvalidFunctionNameException(functionName, _languageKeywords);
+                }
+            }
+        }
+
         public string Convert(
             string funcOfBoolExpression,
             IEnumerable<NamedBooleanFunction> functions)
         {
-            // TODO Spacca se non ci sono tutte le f nell'expression
-            // TODO Check che non vengano utilizzati come nomi di funzioni delle parole chiave del linguaggio
-
+            ValidateFunctionsNames(functions.Select(f => f.Name));
             string booleanExpression = funcOfBoolExpression;
+
             foreach (var func in functions)
-                booleanExpression = booleanExpression.Replace(func.Name, func.Function().ToBoolliString());
+            {
+                var thisFunctResult = func.Function();
+                booleanExpression = booleanExpression.Replace(func.Name, thisFunctResult.ToBoolliString());
+            }
 
             return booleanExpression;
         }
@@ -24,10 +45,9 @@ namespace Boolli
             string funcOfBoolExpression,
             IEnumerable<NamedAsyncBooleanFunction> asyncFunctions)
         {
-            // TODO Spacca se non ci sono tutte, o se ci sono booleanFunction con lo stesso nome
-            // TODO Check che non vengano utilizzati come nomi di funzioni delle parole chiave del linguaggio
-
+            ValidateFunctionsNames(asyncFunctions.Select(f => f.Name));
             string booleanExpression = funcOfBoolExpression;
+
             foreach (var func in asyncFunctions)
             {
                 var thisFuncResult = await func.AsyncFunction();
