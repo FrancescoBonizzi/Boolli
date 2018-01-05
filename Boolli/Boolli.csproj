@@ -21,6 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Boolli.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Boolli.xml</DocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +49,7 @@
     <Compile Include="AstInterpreter.cs" />
     <Compile Include="AstNode.cs" />
     <Compile Include="Extensions\BoolExtensions.cs" />
+    <Compile Include="NamedAsyncBooleanFunction.cs" />
     <Compile Include="NamedBooleanFunction.cs" />
     <Compile Include="Evaluator.cs" />
     <Compile Include="Exceptions\DuplicatedFuncOfBoolExceptions.cs" />

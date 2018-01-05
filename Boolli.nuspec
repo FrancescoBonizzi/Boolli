@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Bolli</title>
+    <authors>Francesco Bonizzi</authors>
+    <owners>Francesco Bonizzi</owners>
+    <projectUrl>https://github.com/FrancescoBonizzi/Boolli</projectUrl>
+    <iconUrl>https://github.com/FrancescoBonizzi/Boolli/blob/master/Bolli-icon-64x64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Booli is a boolean expressions interpreter</description>
+    <copyright>Copyright 2018</copyright>
+    <tags>Bolli interpreter boolean func</tags>
+  </metadata>
+</package>
+
+<!-- TODO Metti il contenuto di Release -->

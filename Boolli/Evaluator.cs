@@ -1,16 +1,24 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 
 namespace Boolli
 {
     public class Evaluator
     {
+        private readonly FuncOfBoolExpressionsToBooleanExpressionConverter _expressionConverter;
+        private readonly AstInterpreter _astInterpreter;
+
+        public Evaluator()
+        {
+            _expressionConverter = new FuncOfBoolExpressionsToBooleanExpressionConverter();
+            _astInterpreter = new AstInterpreter();
+        }
+
         public bool EvaluateBooleanExpression(string booleanExpression)
         {
-            var interpreter = new AstInterpreter();
             var lexer = new Lexer(booleanExpression);
             var parser = new AstParser(lexer);
             var parsedExpression = parser.Parse();
-            var result = interpreter.Interpret(parsedExpression);
+            var result = _astInterpreter.Interpret(parsedExpression);
 
             return result;
         }
@@ -19,17 +27,16 @@ namespace Boolli
             string funcOfBoolExpression, 
             params NamedBooleanFunction[] functions)
         {
-            var interpreter = new AstInterpreter();
-            var expressionConverter = new FuncOfBoolExpressionsToBooleanExpressionConverter();
+            var booleanExpression = _expressionConverter.Convert(funcOfBoolExpression, functions);
+            return EvaluateBooleanExpression(booleanExpression);
+        }
 
-            var booleanExpression = expressionConverter.Convert(funcOfBoolExpression, functions);
-           
-            var lexer = new Lexer(booleanExpression);
-            var parser = new AstParser(lexer);
-            var parsedExpression = parser.Parse();
-            var result = interpreter.Interpret(parsedExpression);
-
-            return result;
+        public async Task<bool> EvaluateFuncOfBoolExpressionAsync(
+            string funcOfBoolExpression,
+            params NamedAsyncBooleanFunction[] functions)
+        {
+            var booleanExpression = await _expressionConverter.Convert(funcOfBoolExpression, functions);
+            return EvaluateBooleanExpression(booleanExpression);
         }
     }
 }
