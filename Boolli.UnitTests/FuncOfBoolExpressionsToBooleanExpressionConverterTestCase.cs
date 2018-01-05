@@ -1,8 +1,7 @@
-﻿using Boolli;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
-namespace Bolli.UnitTests
+namespace Boolli.UnitTests
 {
     [TestClass]
     public class FuncOfBoolExpressionsToBooleanExpressionConverterTestCase

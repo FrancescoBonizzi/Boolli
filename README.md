@@ -1,8 +1,8 @@
-# ![Logo](Bolli-icon-64x64.png) Boolli
+# ![Logo](Boolli-icon-64x64.png) Boolli
 
 Boolli is a boolean expressions interpreter.
 
-What is Bolli able to do? Saying `true` or `false` given a boolean expression!
+What is Boolli able to do? Saying `true` or `false` given a boolean expression!
 
 # Installation
 

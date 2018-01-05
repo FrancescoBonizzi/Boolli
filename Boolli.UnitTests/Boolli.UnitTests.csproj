@@ -7,8 +7,8 @@
     <ProjectGuid>{0AFE2AC6-17E6-41B6-90E1-D8B6499A2098}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bolli.UnitTests</RootNamespace>
-    <AssemblyName>Bolli.UnitTests</AssemblyName>
+    <RootNamespace>Boolli.UnitTests</RootNamespace>
+    <AssemblyName>Boolli.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
