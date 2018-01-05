@@ -1,6 +1,5 @@
-# ![Logo](Bolli-icon-64x64.png) Json.NET
+# ![Logo](Bolli-icon-64x64.png) Bolli
 
-# Boolli
 Booli is a boolean expressions interpreter.
 
 What is Bolli able to do? Saying `true` or `false` given a boolean expression!
