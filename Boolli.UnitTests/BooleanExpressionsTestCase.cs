@@ -68,7 +68,7 @@ namespace Boolli.UnitTests
         [DataRow("! True", false)]
 
         [DataTestMethod]
-        public void Bolli_Should_Evaluate_Correctly_Good_Expressions(
+        public void Boolli_Should_Evaluate_Correctly_Good_Expressions(
             string expression, bool result)
         {
             var boolli = new Evaluator();

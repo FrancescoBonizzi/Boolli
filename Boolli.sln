@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boolli", "Boolli\Boolli.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "Playground\Playground.csproj", "{17956798-AC7C-48A6-9539-9830A00B0F11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolli.UnitTests", "Bolli.UnitTests\Bolli.UnitTests.csproj", "{0AFE2AC6-17E6-41B6-90E1-D8B6499A2098}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boolli.UnitTests", "Boolli.UnitTests\Boolli.UnitTests.csproj", "{0AFE2AC6-17E6-41B6-90E1-D8B6499A2098}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED886598-C70D-4FD8-A6FE-50659BD7F168}"
 	ProjectSection(SolutionItems) = preProject
-		Bolli-icon-64x64.png = Bolli-icon-64x64.png
+		Boolli-icon-64x64.png = Boolli-icon-64x64.png
 		Boolli.nuspec = Boolli.nuspec
 		README.md = README.md
 	EndProjectSection

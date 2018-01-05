@@ -3,15 +3,15 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>Bolli</title>
+    <title>Boolli</title>
     <authors>Francesco Bonizzi</authors>
     <owners>Francesco Bonizzi</owners>
     <projectUrl>https://github.com/FrancescoBonizzi/Boolli</projectUrl>
-    <iconUrl>https://github.com/FrancescoBonizzi/Boolli/blob/master/Bolli-icon-64x64.png</iconUrl>
+    <iconUrl>https://github.com/FrancescoBonizzi/Boolli/blob/master/Boolli-icon-64x64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Booli is a boolean expressions interpreter</description>
     <copyright>Copyright 2018</copyright>
-    <tags>Bolli interpreter boolean func</tags>
+    <tags>Boolli interpreter boolean func</tags>
   </metadata>
 </package>
 
