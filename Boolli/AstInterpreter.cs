@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Boolli.Exceptions;
+using System;
 
 namespace Boolli
 {
@@ -6,6 +7,9 @@ namespace Boolli
     {
         private bool Visit(AstNode startingNode)
         {
+            if (startingNode == null)
+                throw new ArgumentNullException(nameof(startingNode), "AST starting node cannot be null");
+
             switch (startingNode)
             {
                 case BooleanNode node:
@@ -21,7 +25,7 @@ namespace Boolli
                     return Visit(node.LeftNode) || Visit(node.RightNode);
             }
 
-            throw new Exception("Something went wrong");
+            throw new UnexpectedNodeException(startingNode);
         }
 
         public bool Interpret(AstNode startingNode)

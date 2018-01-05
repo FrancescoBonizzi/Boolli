@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Boolli.Exceptions;
 
 namespace Boolli
 {
@@ -15,13 +15,14 @@ namespace Boolli
 
         private void Eat(TokenTypes tokenType)
         {
-            //Console.WriteLine(_currentToken);
             if (_currentToken.TokenType == tokenType)
             {
                 _currentToken = _lexer.GetNextToken();
             }
             else
-                throw new Exception("Boh");
+            {
+                throw new InvalidTokenToParseException(tokenType);
+            }
         }
 
         private AstNode Factor()
@@ -47,7 +48,7 @@ namespace Boolli
                 return node;
             }
 
-            throw new Exception("Invalid factor");
+            throw new InvalidFactorException(token);
         }
 
         private AstNode Expr()

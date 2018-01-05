@@ -8,8 +8,8 @@ namespace Boolli
     public class Lexer
     {
         private const char _eofChar = '^';
-
         private readonly string _input;
+
         private int _currentPosition;
         private char _currentChar;
         
@@ -71,7 +71,6 @@ namespace Boolli
 
         private Token ParseOperand()
         {
-            // Operatore di un solo carattere
             if (_currentChar == '(')
             {
                 Advance();
@@ -91,7 +90,7 @@ namespace Boolli
                 };
             }
 
-            // Operatore di più caratteri
+            // Skipping whitespaces
             int startingPosition = _currentPosition;
             while (!char.IsWhiteSpace(_currentChar) && _currentChar != _eofChar)
             {

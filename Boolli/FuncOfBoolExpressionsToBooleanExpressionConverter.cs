@@ -30,7 +30,7 @@ namespace Boolli
             string booleanExpression = funcOfBoolExpression;
             foreach (var func in asyncFunctions)
             {
-                var thisFuncResult = await func.AsyncFunction(); // TODO: da rivedere
+                var thisFuncResult = await func.AsyncFunction();
                 booleanExpression = booleanExpression.Replace(func.Name, thisFuncResult.ToBoolliString());
             }
 

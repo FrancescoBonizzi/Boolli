@@ -11,7 +11,7 @@ namespace Boolli
             string name, Func<bool> function)
         {
             Name = name;
-            Function = function;
+            Function = function ?? throw new ArgumentNullException(nameof(function), "I cannot evaluate a null function");
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Boolli
             string name, Func<Task<bool>> asyncFunction)
         {
             Name = name;
-            AsyncFunction = asyncFunction;
+            AsyncFunction = asyncFunction ?? throw new ArgumentNullException(nameof(asyncFunction), "I cannot evaluate a null function");
         }
     }
 }
