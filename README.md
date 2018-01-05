@@ -1,13 +1,13 @@
-# ![Logo](Bolli-icon-64x64.png) Bolli
+# ![Logo](Bolli-icon-64x64.png) Boolli
 
-Booli is a boolean expressions interpreter.
+Boolli is a boolean expressions interpreter.
 
 What is Bolli able to do? Saying `true` or `false` given a boolean expression!
 
 # Installation
 
-`TODO Something like PM> Install-Package Bolli`
-`TODO Something like - [NuGet Package](https://www.nuget.org/packages/Newtonsoft.Json)`
+`TODO Something like PM> Install-Package Boolli`
+`TODO Something like - [NuGet Package](https://www.nuget.org/packages/Boolli)`
 
 # Getting started
 `TODO`
