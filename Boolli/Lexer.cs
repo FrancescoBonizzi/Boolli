@@ -12,7 +12,7 @@ namespace Boolli
 
         private int _currentPosition;
         private char _currentChar;
-        
+
         public Lexer(string inputString)
         {
             if (string.IsNullOrWhiteSpace(inputString))
@@ -71,23 +71,23 @@ namespace Boolli
 
         private Token ParseOperand()
         {
-            if (_currentChar == '(')
+            switch (_currentChar)
             {
-                Advance();
-                return new Token()
-                {
-                    TokenType = TokenTypes.Lpar,
-                    TokenValue = "("
-                };
-            }
-            else if (_currentChar == ')')
-            {
-                Advance();
-                return new Token()
-                {
-                    TokenType = TokenTypes.Rpar,
-                    TokenValue = ")"
-                };
+                case '(':
+                    Advance();
+                    return new Token()
+                    {
+                        TokenType = TokenTypes.Lpar,
+                        TokenValue = "("
+                    };
+
+                case ')':
+                    Advance();
+                    return new Token()
+                    {
+                        TokenType = TokenTypes.Rpar,
+                        TokenValue = ")"
+                    };
             }
 
             // Skipping whitespaces
@@ -99,32 +99,34 @@ namespace Boolli
 
             string operand = _input.Substring(startingPosition, _currentPosition - startingPosition);
 
-            if (operand == "and" || operand == "&&")
+            switch (operand)
             {
-                Advance();
-                return new Token()
-                {
-                    TokenType = TokenTypes.And,
-                    TokenValue = operand
-                };
-            }
-            else if (operand == "or" || operand == "||")
-            {
-                Advance();
-                return new Token()
-                {
-                    TokenType = TokenTypes.Or,
-                    TokenValue = operand
-                };
-            }
-            else if (operand == "not" || operand == "!")
-            {
-                Advance();
-                return new Token()
-                {
-                    TokenType = TokenTypes.Not,
-                    TokenValue = operand
-                };
+                case "and":
+                case "&&":
+                    Advance();
+                    return new Token()
+                    {
+                        TokenType = TokenTypes.And,
+                        TokenValue = operand
+                    };
+
+                case "or":
+                case "||":
+                    Advance();
+                    return new Token()
+                    {
+                        TokenType = TokenTypes.Or,
+                        TokenValue = operand
+                    };
+
+                case "not":
+                case "!":
+                    Advance();
+                    return new Token()
+                    {
+                        TokenType = TokenTypes.Not,
+                        TokenValue = operand
+                    };
             }
 
             throw new InvalidLexemException(_currentChar, _input, _currentPosition);
