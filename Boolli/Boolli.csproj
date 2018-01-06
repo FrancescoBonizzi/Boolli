@@ -57,7 +57,6 @@
     <Compile Include="NamedAsyncBooleanFunction.cs" />
     <Compile Include="NamedBooleanFunction.cs" />
     <Compile Include="Evaluator.cs" />
-    <Compile Include="Exceptions\DuplicatedFuncOfBoolExceptions.cs" />
     <Compile Include="Exceptions\InvalidLexemException.cs" />
     <Compile Include="Extensions\BooleanFunctionsExtensions.cs" />
     <Compile Include="FuncOfBoolExpressionsToBooleanExpressionConverter.cs" />

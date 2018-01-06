@@ -2,7 +2,7 @@
 
 namespace Boolli.Exceptions
 {
-    public class InvalidLexemException : Exception
+    internal class InvalidLexemException : Exception
     {
         public char Symbol { get; }
         public string InputString { get; }

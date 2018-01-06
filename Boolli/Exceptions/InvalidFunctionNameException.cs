@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Boolli.Exceptions
 {
-    public class InvalidFunctionNameException : Exception
+    internal class InvalidFunctionNameException : Exception
     {
         public string FunctionName { get; }
 

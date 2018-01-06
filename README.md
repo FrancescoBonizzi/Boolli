@@ -54,7 +54,7 @@ bool result = boolli.EvaluateFuncOfBoolExpression(
         new NamedBooleanFunction("f1", () => true),
         new NamedBooleanFunction("f2", () => false),
     });
-```
+``
 
 #### 3. Evaluate a simple `Func<Task<bool>>` expression
 ```csharp

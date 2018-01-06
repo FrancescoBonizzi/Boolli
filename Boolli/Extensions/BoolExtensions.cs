@@ -1,8 +1,13 @@
 ﻿namespace Boolli.Extensions
 {
-    public static class BoolExtensions
+    internal static class BoolExtensions
     {
+        /// <summary>
+        /// Formally defines .NET bool string representation for this library
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static string ToBoolliString(this bool value)
-            => value ? "true" : "false"; // Per definire formalmente il mapping
+            => value ? "true" : "false";
     }
 }
