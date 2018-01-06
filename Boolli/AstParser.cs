@@ -2,7 +2,7 @@
 
 namespace Boolli
 {
-    public class AstParser
+    internal class AstParser
     {
         private readonly Lexer _lexer;
         private Token _currentToken;

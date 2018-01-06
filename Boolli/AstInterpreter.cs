@@ -3,7 +3,7 @@ using System;
 
 namespace Boolli
 {
-    public class AstInterpreter 
+    internal class AstInterpreter 
     {
         private bool Visit(AstNode startingNode)
         {

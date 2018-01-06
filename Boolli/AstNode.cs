@@ -1,6 +1,6 @@
 ﻿namespace Boolli
 {
-    public class AstNode
+    internal class AstNode
     {
         public Token Token { get; }
         public AstNode LeftNode { get; }

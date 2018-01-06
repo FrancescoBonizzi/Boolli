@@ -5,7 +5,7 @@ using System.Globalization;
 
 namespace Boolli
 {
-    public class Lexer
+    internal class Lexer
     {
         private const char _eofChar = '^';
         private readonly string _input;

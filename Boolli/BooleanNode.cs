@@ -2,7 +2,7 @@
 
 namespace Boolli
 {
-    public class BooleanNode : AstNode
+    internal class BooleanNode : AstNode
     {
         public bool Value { get; }
 

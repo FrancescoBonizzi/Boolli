@@ -1,6 +1,6 @@
 ﻿namespace Boolli
 {
-    public enum TokenTypes
+    internal enum TokenTypes
     {
         Boolean,
         Eof,

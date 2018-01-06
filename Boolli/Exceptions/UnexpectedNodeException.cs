@@ -2,7 +2,7 @@
 
 namespace Boolli.Exceptions
 {
-    public class UnexpectedNodeException : Exception
+    internal class UnexpectedNodeException : Exception
     {
         public AstNode Node { get; }
 

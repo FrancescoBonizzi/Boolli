@@ -2,7 +2,7 @@
 
 namespace Boolli.Exceptions
 {
-    public class InvalidTokenToParseException : Exception
+    internal class InvalidTokenToParseException : Exception
     {
         public TokenTypes TokenType { get; }
 

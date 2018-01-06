@@ -2,7 +2,7 @@
 
 namespace Boolli.Exceptions
 {
-    public class InvalidFactorException : Exception
+    internal class InvalidFactorException : Exception
     {
         public Token Token { get; }
 

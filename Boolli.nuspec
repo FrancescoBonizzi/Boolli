@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Booli is a boolean expressions interpreter</description>
     <copyright>Copyright 2018</copyright>
-    <tags>Boolli interpreter boolean func ast syntax</tags>
+    <tags>Boolli interpreter boolean func ast syntax expression</tags>
   </metadata>
   <files>
     <file src="Boolli\bin\Release\Boolli.dll" target="lib\net46" />
