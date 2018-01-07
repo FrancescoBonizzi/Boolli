@@ -24,7 +24,7 @@ How can it be helpful?
 - When you substitute boolean tokens with `Func<bool>` (even `Func<Task<bool>>`) tokens and define a simple rule system
 
 # Installation
-`PM&gt; Install-Package Boolli`
+`PM> Install-Package Boolli`
 
 [NuGet.org package page](https://www.nuget.org/packages/Boolli)
 
