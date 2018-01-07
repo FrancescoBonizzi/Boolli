@@ -1,4 +1,4 @@
-# ![Logo](Boolli-icon-64x64.png) Boolli
+# ![Logo](https://raw.githubusercontent.com/FrancescoBonizzi/Boolli/master/Boolli-icon-64x64.png) Boolli
 
 Boolli is a boolean expressions interpreter.
 

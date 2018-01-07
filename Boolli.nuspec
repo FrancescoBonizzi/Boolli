@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
+    <id>Boolli</id>
+    <version>1.0.0</version>
     <title>Boolli</title>
+    <licenseurl>https://raw.githubusercontent.com/FrancescoBonizzi/Boolli/master/license.txt</licenseurl>
     <authors>Francesco Bonizzi</authors>
     <owners>Francesco Bonizzi</owners>
     <projectUrl>https://github.com/FrancescoBonizzi/Boolli</projectUrl>
-    <iconUrl>https://github.com/FrancescoBonizzi/Boolli/blob/master/Boolli-icon-64x64.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/FrancescoBonizzi/Boolli/master/Boolli-icon-64x64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Booli is a boolean expressions interpreter</description>
     <copyright>Copyright 2018</copyright>
