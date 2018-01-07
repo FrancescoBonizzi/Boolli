@@ -7,7 +7,7 @@ namespace Boolli
 {
     internal class Lexer
     {
-        private const char _eofChar = '^';
+        private readonly char _eofChar;
         private readonly string _input;
 
         private int _currentPosition;
@@ -21,6 +21,7 @@ namespace Boolli
             _input = inputString.ToLower(CultureInfo.InvariantCulture);
             _currentPosition = 0;
             _currentChar = _input[_currentPosition];
+            _eofChar = Domain.EofChar;
         }
 
         private bool IsEOF

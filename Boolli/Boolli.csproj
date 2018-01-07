@@ -48,6 +48,7 @@
     <Compile Include="AndNode.cs" />
     <Compile Include="AstInterpreter.cs" />
     <Compile Include="AstNode.cs" />
+    <Compile Include="Domain.cs" />
     <Compile Include="Exceptions\EmptyExpressionException.cs" />
     <Compile Include="Exceptions\InvalidFactorException.cs" />
     <Compile Include="Exceptions\InvalidFunctionNameException.cs" />

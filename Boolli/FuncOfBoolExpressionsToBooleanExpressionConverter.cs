@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Boolli
 {
-    public class FuncOfBoolExpressionsToBooleanExpressionConverter
+    internal class FuncOfBoolExpressionsToBooleanExpressionConverter
     {
-        private readonly string[] _languageKeywords = new string[]
+        private readonly string[] _languageKeywords;
+
+        public FuncOfBoolExpressionsToBooleanExpressionConverter()
         {
-            "and", "or", "&&", "||", "&", "|", "!", "not", "true", "false", "0", "1", "^", "(", ")"
-        };
+            _languageKeywords = Domain.LanguageKeywords;
+        }
 
         private void ValidateFunctionsNames(IEnumerable<string> functionsNames)
         {
