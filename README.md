@@ -26,7 +26,7 @@ How can it be helpful?
 # Installation
 `PM> Install-Package Boolli`
 
-[NuGet.org package page](https://www.nuget.org/packages/Boolli)
+[![NuGet](https://img.shields.io/nuget/v/Boolli.svg)](https://www.nuget.org/packages/Boolli/)
 
 # Getting started
 #### 1. Evaluate a simple boolean expression
