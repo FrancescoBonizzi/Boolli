@@ -1,5 +1,7 @@
 # ![Logo](https://raw.githubusercontent.com/FrancescoBonizzi/Boolli/master/Boolli-icon-64x64.png) Boolli
 
+[![Build status](https://flowsoftproject.visualstudio.com/GithubOpenSource/_apis/build/status/Boolli)](https://flowsoftproject.visualstudio.com/GithubOpenSource/_build/latest?definitionId=19)
+
 Boolli is a boolean expressions interpreter.
 
 What is Boolli able to do? Saying `true` or `false` given a boolean expression!
