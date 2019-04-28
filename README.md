@@ -2,6 +2,8 @@
 
 [![Build status](https://flowsoftproject.visualstudio.com/GithubOpenSource/_apis/build/status/Boolli)](https://flowsoftproject.visualstudio.com/GithubOpenSource/_build/latest?definitionId=19)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=FrancescoBonizzi_Boolli&metric=alert_status)](https://sonarcloud.io/dashboard?id=FrancescoBonizzi_Boolli)
+
 Boolli is a boolean expressions interpreter.
 
 What is Boolli able to do? Saying `true` or `false` given a boolean expression!
