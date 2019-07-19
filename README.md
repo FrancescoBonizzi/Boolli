@@ -1,6 +1,6 @@
 # ![Logo](https://raw.githubusercontent.com/FrancescoBonizzi/Boolli/master/Boolli-icon-64x64.png) Boolli
 
-[![Build status](https://flowsoftproject.visualstudio.com/GithubOpenSource/_apis/build/status/Boolli)](https://flowsoftproject.visualstudio.com/GithubOpenSource/_build/latest?definitionId=19)
+[![Build status](https://dev.azure.com/fbonizzi/GithubOpenSource/_apis/build/status/Boolli)](https://dev.azure.com/fbonizzi/GithubOpenSource/_build/latest?definitionId=19)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=FrancescoBonizzi_Boolli&metric=alert_status)](https://sonarcloud.io/dashboard?id=FrancescoBonizzi_Boolli)
 
 Boolli is a boolean expressions interpreter.
