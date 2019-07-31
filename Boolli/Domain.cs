@@ -16,6 +16,6 @@
         /// <summary>
         /// The char that represent the end of the expression string
         /// </summary>
-        public static char EofChar = '^';
+        public static char EofChar { get; } = '^';
     }
 }

@@ -6,7 +6,7 @@ namespace Boolli.Exceptions
     {
         public Token Token { get; }
 
-        public InvalidFactorException(Token token)
+        internal InvalidFactorException(Token token)
             : base($"Token {token.TokenType.ToString()}, with value: {token.TokenValue} is an invalid Factor")
         {
             Token = token;

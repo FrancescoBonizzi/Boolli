@@ -6,7 +6,7 @@ namespace Boolli.Exceptions
     {
         public TokenTypes TokenType { get; }
 
-        public InvalidTokenToParseException(TokenTypes tokenType)
+        internal InvalidTokenToParseException(TokenTypes tokenType)
             : base($"Token type {tokenType.ToString()} cannot be eaten")
         {
             TokenType = tokenType;

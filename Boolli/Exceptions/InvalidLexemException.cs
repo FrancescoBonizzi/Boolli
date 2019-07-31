@@ -8,7 +8,7 @@ namespace Boolli.Exceptions
         public string InputString { get; }
         public int Position { get; }
 
-        public InvalidLexemException(char symbol, string inputString, int position)
+        internal InvalidLexemException(char symbol, string inputString, int position)
             : base($"Invalid lexem found in '{inputString}' at position {position}. Symbol: '{symbol}'")
         {
             Symbol = symbol;

@@ -7,7 +7,7 @@ namespace Boolli.Exceptions
     {
         public string FunctionName { get; }
 
-        public InvalidFunctionNameException(
+        internal InvalidFunctionNameException(
             string functionName,
             IEnumerable<string> forbiddenFunctionNames)
             : base($"{functionName} isn't a valid function name. You cannot use: {string.Join(", ", forbiddenFunctionNames)} as function names")
