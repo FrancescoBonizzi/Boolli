@@ -10,7 +10,7 @@ namespace SampleScenario
 {
     public class AlertGenerator
 	{
-		private Rule[] _alertGenerationRules;
+		private readonly Rule[] _alertGenerationRules;
 
 		public AlertGenerator(Rule[] alertGenerationRules)
 		{
