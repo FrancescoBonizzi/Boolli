@@ -71,7 +71,8 @@ bool result = await boolli.EvaluateFuncOfBoolExpressionAsync(
     });
 ```
 #### 4. A real case scenario
-// Work in progress
+I made a very very very simple scenario (**if you want you can improve it, thanks** 😁) to make a basic rule based alerting system. [This is the source code](/SampleScenario).
+Run it and tell me what you think! 
 
 # Building
 Simply clone this repository and build the `Boolli.sln` solution.
