@@ -65,7 +65,6 @@ namespace SampleScenario
 
 					stringFormatParameters.Add(lastValues.Values.OrderByDescending(v => v.CollectionTime).FirstOrDefault().CollectionTime);
 
-#warning Visto che c'è un OR potrebbe non generare qualcosa!
 					alerts.Add(new Alert()
 					{
 						GeneratingRuleName = rule.RuleName,
